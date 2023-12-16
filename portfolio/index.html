@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrii Mandra - About me</title>
+    <style>
+        body {
+            background-color: #f7f7f7;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            background-color: #00b42d;
+            color: #333;
+            font-size: 1.5em;
+            margin: 0;
+            padding: 10px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        h2 {
+            font-size: 3em;
+            font-weight: 600;
+            margin-top: 20px;
+            color: #00b42d;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-top: 80px;
+            color: #00b42d;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 40%;
+            border: 7px solid #00b42d;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .image-text {
+            font-size: 1.1em;
+            font-weight: 400;
+            margin-top: 25px;
+            text-align: center;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .image-container img {
+            width: 48%;
+            margin-bottom: 20px;
+        }
+
+        .prototype-heading {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-top: 80px;
+            color: #00b42d;
+        }
+
+        /* Added styles for highlighting on mouseover */
+        .highlight-text:hover {
+            background-color: #d4ffd4;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Added Sections with highlighting on mouseover -->
+    <div style="background-color: #00b42d; padding: 10px; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
+        <!-- Updated links with href to respective HTML files -->
+        <a href="about me.html" class="highlight-text" style="color: #333; text-decoration: underline; font-size: 1.2em;">About me</a>
+        <span style="margin: 0 15px;">|</span>
+        <a href="wall of fortune.html" class="highlight-text" style="color: #333; text-decoration: none; font-size: 1.2em;">Wall of Fortune</a>
+        <span style="margin: 0 15px;">|</span>
+        <a href="distillery district time traveler.html" class="highlight-text" style="color: #333; text-decoration: none; font-size: 1.2em;">Distillery District Time Traveler</a>
+        <span style="margin: 0 15px;">|</span>
+        <a href="aroma.html" class="highlight-text" style="color: #333; text-decoration: none; font-size: 1.2em;">ARoma</a>
+        <span style="margin: 0 15px;">|</span>
+        <a href="contact.html" class="highlight-text" style="color: #333; text-decoration: none; font-size: 1.2em;">Contact</a>
+    </div>
+    <!-- End of Added Sections -->
+
+    <h1>Andrii Mandra Portfolio</h1>
+    <h2>About me</h2>
+
+    <div class="image-text">
+        <p>"As a young interaction design student with more than 2 years of hands-on experience in UX and UI design, I am dedicated to crafting user-centric digital experiences that seamlessly blend aesthetic appeal with functionality. My expertise lies in creating compelling designs that resonate with users, focusing on enhancing usability and driving engagement. Through a strong foundation in effective communication, project management, and problem-solving, I collaborate seamlessly with teams to deliver innovative solutions on time and within the project scope. My passion for staying at the forefront of design trends and technologies ensures that I bring fresh perspectives and creative solutions to every project, optimizing user satisfaction and achieving business objectives."</p>
+    </div>
+
+    <h3>Education</h3>
+
+    <!-- Swapping the images -->
+    <div class="image-text">
+        <p>George Brown College. International Business Administration Program. SEP 2020-APR 2021.</p>
+
+        <p>George Brown College. Interaction Design Program. SEP 2021-DEC 2023</p>
+    </div>
+
+    <h3 class="prototype-heading">Skills</h3>
+
+    <div class="image-text">
+        <p>Illustrator, Figma, Photoshop, After Effects, Meta Spark Studio, XD, Maya, Cinema 4D, Visual Studio Code, Processing.</p>
+    </div>
+
+    <h3 class="prototype-heading">Life experience</h3>
+
+    <div class="image-text">
+        <p>Throughout my childhood, I was always drawn to art and design. I spent countless hours sketching, painting, and creating various crafts, immersing myself in the world of creativity. I realized early on that design is a medium where imagination can be translated into tangible, visual forms. This innate interest laid the foundation for my journey as a UX and UI designer, shaping my perspective on the power of design to bring ideas to life and connect with people on a meaningful level.</p>
+    </div>
+
+    <script>
+        // JavaScript for highlighting text on mouseover
+        document.addEventListener('DOMContentLoaded', function () {
+            const highlightTexts = document.querySelectorAll('.highlight-text');
+
+            highlightTexts.forEach(text => {
+                text.addEventListener('mouseover', function () {
+                    this.style.backgroundColor = '#d4ffd4';
+                });
+
+                text.addEventListener('mouseout', function () {
+                    this.style.backgroundColor = 'transparent';
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

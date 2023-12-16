@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrii Mandra - ARoma</title>
+    <style>
+        body {
+            background-color: #f7f7f7;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            background-color: #00b42d;
+            color: #333;
+            font-size: 1.5em;
+            margin: 0;
+            padding: 10px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        h2 {
+            font-size: 3em;
+            font-weight: 600;
+            margin-top: 20px;
+            color: #00b42d;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-top: 80px;
+            color: #00b42d;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 40%;
+            border: 7px solid #00b42d;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .image-text {
+            font-size: 1.1em;
+            font-weight: 400;
+            margin-top: 25px;
+            text-align: center;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .image-container img {
+            width: 48%;
+            margin-bottom: 20px;
+        }
+
+        .prototype-heading {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-top: 80px;
+            color: #00b42d;
+        }
+
+        /* Added styles for highlighting on mouseover */
+        .highlight-text:hover {
+            background-color: #d4ffd4;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Added Sections with highlighting on mouseover -->
+    <div style="background-color: #00b42d; padding: 10px; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
+        <!-- Updated links with href to respective HTML files -->
+        <a href="index.html" class="highlight-text" style="color: #333; text-decoration: none; font-size: 1.2em;">About me</a>
+        <span style="margin: 0 15px;">|</span>
+        <a href="wall of fortune.html" class="highlight-text" style="color: #333; text-decoration: none; font-size: 1.2em;">Wall of Fortune</a>
+        <span style="margin: 0 15px;">|</span>
+        <a href="distillery district time traveler.html" class="highlight-text" style="color: #333; text-decoration: none; font-size: 1.2em;">Distillery District Time Traveler</a>
+        <span style="margin: 0 15px;">|</span>
+        <a href="aroma.html" class="highlight-text" style="color: #333; text-decoration: underline; font-size: 1.2em;">ARoma</a>
+        <span style="margin: 0 15px;">|</span>
+        <a href="contact.html" class="highlight-text" style="color: #333; text-decoration: none; font-size: 1.2em;">Contact</a>
+    </div>
+    <!-- End of Added Sections -->
+
+    <h1>Andrii Mandra Portfolio</h1>
+    <h2>ARoma</h2>
+    <img src="pictures 3/first picture.jpg" alt="Main">
+    <!-- Adjust the path accordingly based on your folder structure -->
+
+    <div class="image-text">
+        <p>"ARoma" is the project on which I and three other group members worked on during Fall 2023 semester for the Immersive Media 1 course in the Interaction Design program at George Brown College.</p>
+
+        <p>This project is an idea of application called "ARoma". This application has an AR feature that provides a specific 3d food model by scanning a food menu. It also shows a dietary warnings, total price, and nutrition ingredients of the specific food that visitor scanned in menu. This idea was developed specifically for Markham Station restaurant, but we considered to make it more global in the future and develope it for any possible restaurant.</p>
+
+        <p>This idea received a positive feedback from Immersive Media 1 professor Steven Reaume for its clean design, high posibility of potential creation, detailed explanation of development process, and fulfillment of all requirements of assignment.</p>
+    </div>
+
+    <h3>Idea Development</h3>
+
+    <!-- Swapping the images -->
+    <div class="image-container">
+        <img src="pictures 3/research why.jpg" alt="Why">
+        <img src="pictures 3/target.jpg" alt="Target">
+    </div>
+
+    <div class="image-container">
+        <img src="pictures 3/moodboard.jpg" alt="Moodboard">
+        <img src="pictures 3/logo ideas.jpg" alt="Logo">
+    </div>
+
+    <div class="image-container">
+        <img src="pictures 3/benefits.jpg" alt="Benefits">
+    </div>
+    
+    <h3 class="prototype-heading">Prototype</h3>
+
+    <!-- Adding the new images side by side -->
+    <div class="image-container">
+        <img src="pictures 3/app journey.jpg" alt="App Journey">
+        <img src="pictures 3/app journey 2.jpg" alt="App Journey 2">
+    </div>
+
+    <div class="image-container">
+        <img src="pictures 3/ar.jpg" alt="AR">
+    </div>
+
+    <script>
+        // JavaScript for highlighting text on mouseover
+        document.addEventListener('DOMContentLoaded', function () {
+            const highlightTexts = document.querySelectorAll('.highlight-text');
+
+            highlightTexts.forEach(text => {
+                text.addEventListener('mouseover', function () {
+                    this.style.backgroundColor = '#d4ffd4';
+                });
+
+                text.addEventListener('mouseout', function () {
+                    this.style.backgroundColor = 'transparent';
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
