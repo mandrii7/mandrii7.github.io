@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrii Mandra - Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            color: #333;
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            overflow: hidden; 
+        }
+
+        h1 {
+            background-image: url('images/tab.jpg');
+            color: #333;
+            font-size: 2em;
+            margin: 0;
+            padding: 80px 0;
+            width: 100vw;
+            height: 100vh; 
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .logo {
+            transition: transform 0.3s ease;
+            position: absolute;
+            top: 35px;
+            left: 50px;
+            width: 180px;
+            height: auto;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        .top-right-text {
+            position: absolute;
+            top: 75px;
+            right: 100px;
+            font-family: 'Open Sans', sans-serif;
+            color: rgb(240, 240, 240);
+        }
+
+        .nav-item {
+            margin-left: 60px;
+            display: inline;
+            font-size: 18px;
+            color: rgb(240, 240, 240);
+            text-decoration: none; 
+        }
+
+        .nav-item:hover {
+            color: rgb(38, 38, 38);
+        }
+
+        /* Smooth fade-in animation for elements */
+        .fadeIn {
+            opacity: 0;
+            animation: fadeIn 0.6s ease-out forwards;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .collaboration-text {
+            font-size: 36px;
+            color: rgb(38, 38, 38);
+            position: absolute;
+            width: 100%;
+            top: 33%;
+            right: 24%;
+            transform: translateY(-50%);
+            font-weight: bold;
+            opacity: 0;
+        }
+
+        .reach-out-text {
+            position: absolute;
+            text-align: left;
+            font-family: 'Open Sans', sans-serif;
+            color: rgb(240, 240, 240);
+            font-size: 20px;
+            line-height: 16px;
+            opacity: 0;
+            top: 37%;
+            right: 790px;
+        }
+
+        .link-text {
+            top: 54%;
+            right: 973px;
+            position: absolute;
+            text-align: left;
+            font-family: 'Open Sans', sans-serif;
+            color: rgb(240, 240, 240);
+            font-size: 21px;
+            line-height: 35px;
+            opacity: 0;
+        }
+
+        .bottom-tab {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 9px;
+            text-align: center;
+        }
+
+        .bottom-tab span {
+            color: rgb(167, 166, 166);
+            font-size: 17px;
+        }
+
+        .contact-form {
+            position: absolute;
+            top: 30%;
+            right: 170px;
+            width: 500px;
+            opacity: 0;
+        }
+
+        .contact-form .form-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: calc(48% - 25px); /* Adjusted width for 2-column layout */
+            margin: 7px 0;
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            background-color: rgba(250, 250, 250, 0.8);
+            color: #333;
+            font-family: 'Open Sans', sans-serif; /* Ensure same font */
+            border-radius: 4px; /* Rounded corners */
+        }
+
+        .contact-form textarea {
+            width: 480px; /* Full width for the message box */
+            height: 240px;
+            border-radius: 8px;
+        }
+
+        .contact-form input[type="submit"] {
+            width: 40%; /* Full width for the submit button */
+            background-color: rgba(247, 247, 247, 0.8);
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            font-family: 'Open Sans', sans-serif;
+            border-radius: 8px;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: rgb(38, 38, 38);
+            color: #fff;
+        }
+
+        /* Glow effect copied from code 2 */
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px rgba(167, 166, 166, 0);
+            }
+            to {
+                text-shadow: 0 0 10px rgba(167, 166, 166, 0.7), 0 0 20px rgba(167, 166, 166, 0.5);
+            }
+        }
+
+        /* Apply the glow effect to the .link-text a */
+        .link-text a {
+            color: rgb(240, 240, 240);
+            text-decoration: none;
+            animation: glow 2s infinite alternate;
+        }
+
+        .link-text a:hover {
+            color: rgb(240, 240, 240);
+        }
+    </style>
+</head>
+<body>
+    <h1><a href="#"><img src="images/logo.pdf" class="logo" alt="Logo" onclick="window.location.href='index.html';"></a></h1>
+    <div class="top-right-text">
+        <a href="work.html" class="nav-item">Work</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+    </div>
+
+    <div class="collaboration-text">Let's work together!</div>
+
+    <div class="reach-out-text">
+        <p>Feel free to reach out if you have a project you'd</p>
+        <p>like to collaborate on or if you'd like to grab a</p>
+        <p>coffee and chat!</p>
+    </div>
+
+    <div class="link-text">
+        <p><a href="mailto:andriimandra7@gmail.com">andriimandra7@gmail.com</a></p>
+        <p><a href="tel:+14379745737">+1 (437) 974-5737</a></p>
+        <p><a href="https://www.linkedin.com/in/andrii-mandra-a5a153256" target="_blank">LinkedIn</a></p>
+    </div>
+
+    <div class="contact-form">
+        <form action="https://formspree.io/f/xkgwlopj" method="POST">
+            <div class="form-row">
+                <input type="text" name="full_name" placeholder="Full Name" required>
+                <input type="email" name="email_address" placeholder="Email Address" required>
+            </div>
+            <div class="form-row">
+                <input type="text" name="company" placeholder="Company">
+                <input type="text" name="subject" placeholder="Subject">
+            </div>
+            <textarea name="message" placeholder="Message" required></textarea>
+            <input type="submit" value="Send Message">
+        </form>
+    </div>
+
+    <div class="bottom-tab">
+        <span>Copyright © 2024 Andrii Mandra</span>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const collaborationText = document.querySelector('.collaboration-text');
+            const reachOutText = document.querySelector('.reach-out-text');
+            const linkText = document.querySelector('.link-text');
+            const contactForm = document.querySelector('.contact-form');
+
+            function showElementWithDelay(element, delay) {
+                setTimeout(() => {
+                    element.classList.add('fadeIn');
+                }, delay);
+            }
+
+            // Show "collaboration-text" first
+            showElementWithDelay(collaborationText, 600);
+
+            // Show "reach-out-text" and "link-text" together
+            showElementWithDelay(reachOutText, 1200);
+            showElementWithDelay(linkText, 1200);
+
+            // Show the contact form (all boxes)
+            showElementWithDelay(contactForm, 1800);
+        });
+    </script>
+</body>
+</html>

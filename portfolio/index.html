@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrii Mandra - Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            color: #333;
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        h1, .top-tab, .bottom-tab {
+            background-image: url('images/tab.jpg');
+            color: #333;
+            font-size: 2em;
+            margin: 0;
+            padding: 360px 0;
+            width: 100vw;
+            position: absolute;
+            left: 0;
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            top: 0;
+            border-bottom-left-radius: 250px;
+            border-bottom-right-radius: 250px;
+        }
+
+        .top-tab {
+            bottom: 0;
+            padding: 100px 0;
+            border-top-left-radius: 250px;
+            border-top-right-radius: 250px;
+        }
+
+        .bottom-tab {
+            bottom: -1460px; /* Moved an additional 50px higher */
+            padding: 620px 0 50px 0; 
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-top-left-radius: 250px;
+            border-top-right-radius: 250px;
+        }
+
+        .logo, .bottom-logo {
+            transition: transform 0.3s ease;
+            position: absolute;
+            top: 35px;
+            left: 50px;
+            width: 180px;
+            height: auto;
+        }
+
+        .bottom-logo {
+            position: absolute;
+            top: 70px;
+            left: 255px;
+            width: 220px;
+            height: auto;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        .bottom-logo:hover {
+            transform: scale(0.95);
+        }
+
+        .top-right-text {
+            position: absolute;
+            top: 70px;
+            right: 100px;
+            font-family: 'Open Sans', sans-serif;
+            color: rgb(240, 240, 240);
+        }
+
+        .nav-item {
+            margin-left: 60px;
+            display: inline;
+            font-size: 18px;
+            color: rgb(240, 240, 240); /* Ensure the text color stays consistent */
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        .nav-item:hover {
+            color: rgb(38, 38, 38);
+        }
+
+        .intro-text, .user-centric-text, .projects-title, .project-frame, .collaboration-text {
+            animation: fadeIn 0.6s ease-out;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+
+        .intro-text {
+            animation-delay: 0.6s;
+        }
+
+        .user-centric-text {
+            animation-delay: 1.2s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .intro-text {
+            position: absolute;
+            top: 220px;
+            left: 0;
+            width: 100%;
+            font-size: 46px;
+            color: rgb(38, 38, 38);
+            text-align: left;
+            padding-left: 228px;
+            font-weight: bold;
+        }
+
+        .user-centric-text {
+            font-weight: normal;
+            position: absolute;
+            top: 305px;
+            left: 0;
+            width: 65%;
+            font-size: 42px;
+            color: rgb(240, 240, 240);
+            text-align: left;
+            padding-left: 230px;
+            line-height: 1.3;
+        }
+
+        .scroll-text {
+            position: absolute;
+            top: 665px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgb(166, 166, 166);
+            font-size: 18px;
+            animation: glow 2s infinite alternate;
+        }
+
+        .bottom-tab span, .bottom-tab p {
+            position: absolute;
+            top: 635px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgb(166, 166, 166);
+            font-size: 17px;
+        }
+
+        .bottom-tab p {
+            top: 65px; 
+            left: 70%;
+            color: rgb(240, 240, 240);
+            font-size: 18px;
+            width: 30%; 
+            text-align: center;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px rgba(167, 166, 166, 0);
+            }
+            to {
+                text-shadow: 0 0 10px rgba(167, 166, 166, 0.7), 0 0 20px rgba(167, 166, 166, 0.5);
+            }
+        }
+
+        .arrow-down {
+            position: absolute;
+            top: 610px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgb(240, 240, 240);
+            animation: bounce 0.5s infinite alternate;
+            font-size: 34px;
+        }
+
+        @keyframes bounce {
+            from {
+                transform: translateY(-5px) translateX(-50%);
+            }
+            to {
+                transform: translateY(0px) translateX(-50%);
+            }
+        }
+
+        .projects-title {
+            position: absolute;
+            top: 795px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 30px;
+            color: rgb(50, 129, 85);
+            font-weight: bold;
+        }
+
+        .projects-title:before {
+            content: "";
+            position: absolute; 
+            top: -20px; 
+            width: 100vw; 
+            height: 100px; 
+            background-color: rgb(249, 249, 249);
+            z-index: -1;
+            left: -630px;
+        }
+
+        .initial-hide {
+            display: none;
+        }
+
+        .initial-show {
+            display: block; /* Or whatever display style suits your layout */
+        }
+
+        .frame-container {
+            position: relative;
+            top: 890px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .project-frame {
+            transition: transform 0.3s ease;
+            border: 2px solid rgb(50, 129, 85);
+            border-radius: 20px;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+            width: 35%;
+            height: 550px;
+            margin: 40px;
+            display: inline-block;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .project-frame.initial-hide {
+            display: none;
+        }
+
+        .project-frame.initial-show {
+            display: inline-block; /* Or your preferred display style */
+        }
+
+        .project-frame:hover {
+            transform: scale(1.03);
+        }
+
+        .collaboration-text {
+            font-size: 28px;
+            color: rgb(38, 38, 38);
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 350px;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            font-size: 20px;
+            color: rgb(240, 240, 240);
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 250px;
+            animation: glow 2s infinite alternate;
+        }
+
+        .separator-line {
+            position: absolute;
+            width: 80%;
+            height: 1px;
+            background-color: rgb(240, 240, 240);
+            left: 10%;
+            bottom: 450px;
+        }
+    </style>
+</head>
+<body>
+    <h1><a href="#"><img src="images/logo.pdf" class="logo" alt="Logo" onclick="window.location.reload(true);"></a></h1>
+    <div class="intro-text">Hey there, I'm Andrii.</div>
+    <div class="user-centric-text">I am dedicated to crafting user-centric digital experiences that seamlessly blend aesthetic appeal with functionality.</div>
+    <div class="top-right-text">
+        <a href="work.html" class="nav-item">Work</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+    </div> 
+    <div class="arrow-down">↓</div>
+    <div class="scroll-text">Scroll to see my work!</div>
+    <div class="projects-title" id="recentWork">Recent Work</div>
+    <div class="frame-container">
+        <div class="project-frame" style="background-image: url('images/ddtt\ box.png');" onclick="window.location.href='ddtt vr.html';"></div>
+        <div class="project-frame" style="background-image: url('images/home\ depot\ preview.png');" onclick="window.location.href='home depot.html';"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const projectFrames = document.querySelectorAll('.frame-container .project-frame');
+            const recentWork = document.getElementById('recentWork');
+            const collaborationText = document.querySelector('.collaboration-text');
+            let firstTwoShown = false;
+            let nextTwoShown = false;
+            let recentWorkShown = false;
+            let collaborationShown = false;
+
+            function showRecentWork() {
+                recentWork.classList.add('fadeIn', 'initial-show');
+                recentWorkShown = true;
+            }
+
+            function showFirstTwoProjectFrames() {
+                if (projectFrames.length > 0) projectFrames[0].classList.add('fadeIn', 'initial-show');
+                if (projectFrames.length > 1) projectFrames[1].classList.add('fadeIn', 'initial-show');
+                firstTwoShown = true;
+            }
+
+            function showNextTwoProjectFrames() {
+                if (projectFrames.length > 2) projectFrames[2].classList.add('fadeIn', 'initial-show');
+                nextTwoShown = true;
+            }
+
+            function showCollaborationText() {
+                collaborationText.classList.add('fadeIn', 'initial-show');
+                collaborationShown = true;
+            }
+
+            window.addEventListener('scroll', () => {
+                const scrolledDown = window.scrollY || window.pageYOffset;
+                if (!recentWorkShown && scrolledDown > 330) {
+                    showRecentWork();
+                }
+                if (!firstTwoShown && scrolledDown > 600) {
+                    showFirstTwoProjectFrames();
+                }
+                if (!nextTwoShown && scrolledDown > 1200) {
+                    showNextTwoProjectFrames();
+                }
+                if (!collaborationShown && scrolledDown > 1300) { // Adjust this value to match when you want "Let's work together!" to appear
+                    showCollaborationText();
+                }
+            });
+
+            projectFrames.forEach(frame => frame.classList.add('initial-hide'));
+            recentWork.classList.add('initial-hide');
+            collaborationText.classList.add('initial-hide');
+        });
+    </script>   
+    <div class="bottom-tab">
+        <a href="#" onclick="window.location.reload(true);"><img src="images/logo.pdf" class="bottom-logo" alt="Logo"></a>
+        <span>Copyright © 2024 Andrii Mandra</span>
+        <p>I am dedicated to crafting user-centric digital experiences that seamlessly blend aesthetic appeal with functionality.</p>
+        <div class="separator-line"></div>
+        <div class="collaboration-text">Let's work together!</div>
+        <div class="contact-info"><a href="mailto:andriimandra7@gmail.com" target="_blank" style="color: rgb(240, 240, 240); text-decoration: none;">andriimandra7@gmail.com</a></div>
+        <div class="contact-info" style="bottom: 140px;"><a href="tel:+14379745737" style="color: rgb(240, 240, 240); text-decoration: none;">+1 (437) 974-5737</a></div>
+    </div>
+</body>
+</html>
